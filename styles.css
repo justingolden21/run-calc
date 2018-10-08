@@ -38,7 +38,8 @@ button:hover {
 summary {
 	cursor: pointer;
 	padding: 5px;
-
+}
+summary, kbd {
 	-webkit-touch-callout: none; /* iOS Safari */
 	-webkit-user-select: none; /* Safari */
 	-khtml-user-select: none; /* Konqueror HTML */
