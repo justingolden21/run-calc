@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+<style type="text/css">
+.st0{fill:#fff;stroke:#666;stroke-width:3;}
+.st1{fill:none;stroke:#666;stroke-width:3;}
+.st2{fill:none;stroke:#666;stroke-width:2;}
+</style>
+<circle class="st0" cx="32" cy="32" r="24"/>
+<polyline class="st1" points="32,16 32,32 44,44 "/>
+<line class="st2" x1="20" y1="24" x2="20" y2="32"/>
+<line class="st2" x1="16" y1="28" x2="24" y2="28"/>
+<line class="st2" x1="16" y1="40" x2="24" y2="40"/>
+</svg>
