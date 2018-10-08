@@ -60,8 +60,10 @@ kbd {
 	background-color: #666;
 }
 .bg-warning {
-	background-color: #c66;
+	/*background-color: #c66;*/
+	background-color: #666;
 }
 .bg-success {
-	background-color: #6c6;
+	/*background-color: #6c6;*/
+	background-color: #66c;
 }
