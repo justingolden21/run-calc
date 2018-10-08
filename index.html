@@ -30,7 +30,7 @@
 <div class="container text-center">
 <!-- <img src="img/icon.svg" width="64px"> -->
 <h3 class="text-center"> <i class="fas fa-walking"></i> Mile Time Calc <i class="fas fa-clock"></i></h3>
-
+<br>
 <div class="row">
 <div class="col-sm-4">
 <input id="hr" autofocus="true" class="form-control input-lg" type="number" value="0" min="0" max="24">Hours</input>
@@ -42,18 +42,15 @@
 <input id="sec" class="form-control input-lg" type="number" value="0" min="0" max="60">Seconds</input>
 </div>
 </div>
-
 <br>
 <input id="mi" class="form-control input-lg" type="number" value="0" min="0" max="1000">Miles</input>
 <br>
-
-<button onclick="calc()" class="btn btn-default btn-lg" type="submit">Calculate <i class="fas fa-calculator"></i></button>
-
+<button id="calcButton" class="btn btn-default btn-lg" type="submit">Calculate <i class="fas fa-calculator"></i></button>
 <br><br>
-<b><p id="result">Enter inputs then click "Calculate" to find your average mile time</p></b>
-
+<p id="result" class="bg-info">Enter inputs then click "Calculate" to find your average mile time</p>
+<br>
 <p>Use <kbd>Tab</kbd> and <kbd>Shift</kbd> + <kbd>Tab</kbd> to navigate inputs</p>
-
+<br>
 <details>
 	<summary> History <i class="fas fa-history"></i></summary>
 	<p id="consolePara"></p>

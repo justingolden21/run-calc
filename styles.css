@@ -1,3 +1,4 @@
+/*general*/
 body, input, button {
 	font-size: 12pt;
 	color: #666 !important;
@@ -10,20 +11,24 @@ body, input, button {
   background: #66c;
   color: #fff;
 }
-button {
-	margin: 20px;
-}
+
+/*inputs*/
 input, button, summary {
 	border: 2px solid #666 !important;
 	border-radius: 0px !important;
 	text-align: center;
 }
-
-input:focus, button:focus, summary:focus {
+input:focus, button:focus {
 	outline: 2px solid #66c !important;
 	box-shadow: 0px 0px #fff !important;
 	background-color: #fff !important;
 	color: #666 !important;
+}
+summary:focus {
+	outline: none;
+}
+button {
+	margin: 20px;
 }
 button:hover {
 	background-color: #66c !important;
@@ -33,7 +38,29 @@ button:hover {
 summary {
 	cursor: pointer;
 	padding: 5px;
+
+	-webkit-touch-callout: none; /* iOS Safari */
+	-webkit-user-select: none; /* Safari */
+	-khtml-user-select: none; /* Konqueror HTML */
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* Internet Explorer/Edge */
+	user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
 }
+
+/*specific*/
 kbd {
 	background-color: #666;
+}
+#result {
+	color: #fff;
+	padding: 5px;
+}
+.bg-info {
+	background-color: #66c;
+}
+.bg-warning {
+	background-color: #c66;
+}
+.bg-success {
+	background-color: #6c6;
 }

@@ -1,8 +1,5 @@
 To Do
-add favicon
+convert units
 
 Maybe
 url params?
-<!-- todo: convert units
-change p background color based off if is warning or calculated
- -->
