@@ -56,7 +56,8 @@ kbd {
 	padding: 5px;
 }
 .bg-info {
-	background-color: #66c;
+	/*background-color: #66c;*/
+	background-color: #666;
 }
 .bg-warning {
 	background-color: #c66;
