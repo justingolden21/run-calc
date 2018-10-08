@@ -1,4 +1,4 @@
-# Run Calc
+# <p style="color:#666;">Run Calc</p>
 
 <img src="img/icon.svg" width="48px">
 
