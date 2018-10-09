@@ -1,85 +1,44 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
 
+<<<<<<< HEAD
 <!-- todo: convert units
-change p background color based off if is warning or calculated
 url params
-use kbd tab shift tab to navigate
+favicon
  -->
 
+=======
+>>>>>>> 2d0003be535b985afaaef0e8366b84aa0b6ffa07
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
 <meta charset="utf-8">
 <meta name="title=" content="Mile Time Calc">
 <meta name="robots" content="index, follow">
 <meta name="description" content="Use Mile Time Calc to easily calculate your mile time given time and distance">
 <meta name="keywords" content="mile time, calcuate mile time, mile time calculator, mile time calc, calc mile time, speed calculator, speed calc, calculate speed, calc speed">
-
-<!-- <meta name="theme-color" content="#339">
-<meta name="msapplication-navbutton-color" content="#339">
-<meta name="apple-mobile-web-app-status-bar-style" content="#339"> -->
+<meta name="theme-color" content="#66c">
+<meta name="msapplication-navbutton-color" content="#66c">
+<meta name="apple-mobile-web-app-status-bar-style" content="#66c">
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
 
-<!-- <link rel="stylesheet" type="text/css" href="styles/styles.css">
-<script src="scripts/scripts.js"></script> -->
+<link rel="stylesheet" type="text/css" href="styles.css">
+<script src="scripts.js"></script>
 
-<!-- <link rel="icon" href="img/d20.png" type="image/png"> -->
+<link rel="icon" href="img/favicon.png" type="image/png">
 
 <title>Mile Time Calc</title>
 
-
-<style>
-body, input, button {
-	font-size: 12pt;
-	color: #666 !important;
-}
-::-moz-selection {
-  background: #66c;
-  color: #fff;
-}
-::selection {
-  background: #66c;
-  color: #fff;
-}
-button {
-	margin: 20px;
-}
-input, button, summary {
-
-	border: 1px solid #666 !important;
-	border-radius: 0px !important;
-	text-align: center;
-}
-
-input:focus, button:focus, summary:focus {
-	outline: 2px solid #66c !important;
-	box-shadow: 0px 0px #fff !important;
-	background-color: #fff !important;
-	color:# 333 !important;
-}
-button:hover {
-	background-color: #66c !important;
-	color: #fff !important;
-	border-color: #66c !important;
-}
-summary {
-	cursor: pointer;
-}
-
-
-</style>
 </head>
 <body>
 
 <div class="container text-center">
-
+<!-- <img src="img/icon.svg" width="64px"> -->
 <h3 class="text-center"> <i class="fas fa-walking"></i> Mile Time Calc <i class="fas fa-clock"></i></h3>
-
+<br>
 <div class="row">
 <div class="col-sm-4">
 <input id="hr" autofocus="true" class="form-control input-lg" type="number" value="0" min="0" max="24">Hours</input>
@@ -91,56 +50,21 @@ summary {
 <input id="sec" class="form-control input-lg" type="number" value="0" min="0" max="60">Seconds</input>
 </div>
 </div>
-
 <br>
 <input id="mi" class="form-control input-lg" type="number" value="0" min="0" max="1000">Miles</input>
 <br>
-
-<button onclick="calc()" class="btn btn-default btn-lg" type="submit">Calculate <i class="fas fa-calculator"></i></button>
-
+<button id="calcButton" class="btn btn-default btn-lg" type="submit">Calculate <i class="fas fa-calculator"></i></button>
+<br><br>
+<p id="result" class="bg-info">Enter inputs then click "Calculate" to find your average mile time</p>
 <br>
-<p id="result"></p>
+<p>Use <kbd>Tab</kbd> and <kbd>Shift</kbd> + <kbd>Tab</kbd> to navigate inputs</p>
+<br>
 <details>
-	<summary> History <i class="fas fa-history"></i></summary>
+	<summary tabindex="-1"> History <i class="fas fa-history"></i></summary>
 	<p id="consolePara"></p>
 </details>
 
 </div>
 
-<script>
-function calc() {
-	
-	let seconds = parseFloat($('#hr').val() )*3600 + parseFloat($('#min').val() )*60 + parseFloat($('#sec').val() );
-	let miles = parseFloat($('#mi').val() );
-
-	if(miles==0 || isNaN(miles) ) {
-		$('#result').html("Miles cannot be zero");
-		return;
-	} else if(seconds==0 || isNaN(seconds) ) {
-		$('#result').html("Time cannot be zero");
-		return;
-	}
-		
-	let secPerMi = seconds / miles;
-	let hoursResult = secPerMi / 3600;
-	let minsResult  = (hoursResult - Math.floor(hoursResult) ) * 60;
-	let secsResult  = (minsResult -  Math.floor(minsResult)  ) * 60;	
-	
-	hoursResult = Math.floor(hoursResult);
-	minsResult =  Math.floor(minsResult);
-	secsResult =  Math.round(secsResult*100)/100;
-	consoleText = "You ran a <b>" + (hoursResult ? hoursResult + " hour " : "") + (minsResult ? minsResult + " min " : "") + (secsResult ? secsResult + " sec" : "") + " </b> mile"
-	$('#result').html(consoleText);
-	$('#consolePara').after(consoleText + "<br>");
-}
-
-$(function() {
-	$('input').on('click', function() {
-		$(this).select();
-	});
-	$('#hr').select();
-});
-
-</script>
 </body>
 </html>
