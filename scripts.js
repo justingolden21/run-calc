@@ -51,10 +51,10 @@ $(function() {
 
 	$('#km').val($('#mi').val()*MI_PER_KM); //TODO: round
 
-	$('#mi').on('keyup', function() {
+	$('#mi').on('change', function() {
 		$('#km').val($('#mi').val()*MI_PER_KM);
 	});
-	$('#km').on('keyup', function() {
+	$('#km').on('change', function() {
 		$('#mi').val($('#km').val()/MI_PER_KM);
 	});
 
