@@ -1,3 +1,5 @@
+const MI_PER_KM = 1.60934;
+
 function calc() {
 	
 	let seconds = parseFloat($('#hr').val() )*3600 + parseFloat($('#min').val() )*60 + parseFloat($('#sec').val() );
@@ -43,6 +45,18 @@ $(function() {
 	$('#hr').val('1');
 	$('#mi').val('1');
 
-
 	$('#hr').select();
+
+	// Kilometer stuff
+
+	$('#km').val($('#mi').val()*MI_PER_KM); //TODO: round
+
+	$('#mi').on('keyup', function() {
+		$('#km').val($('#mi').val()*MI_PER_KM);
+	});
+	$('#km').on('keyup', function() {
+		$('#mi').val($('#km').val()/MI_PER_KM);
+	});
+
+
 });
