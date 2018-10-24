@@ -11,6 +11,14 @@ body, input, button {
   background: #66c;
   color: #fff;
 }
+kbd::selection {
+  background: #ccc;
+  color: #fff;
+}
+kbd::-moz-selection {
+  background: #ccc;
+  color: #fff;
+}
 
 /*inputs*/
 input, button, summary {
@@ -39,7 +47,7 @@ summary {
 	cursor: pointer;
 	padding: 5px;
 }
-summary, kbd {
+summary, br {
 	-webkit-touch-callout: none; /* iOS Safari */
 	-webkit-user-select: none; /* Safari */
 	-khtml-user-select: none; /* Konqueror HTML */
